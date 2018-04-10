@@ -19,4 +19,4 @@ Om echter wat comfortabeler te programmeren zijn er zogenaamde integrated develo
 
 **Let op:** Het is belangrijk dat je eerst R en daarna RStudio installeert. Zie [hier](https://youtu.be/d-u_7vdag-0) (MAC) en [hier](https://youtu.be/EY01x_TJOi4) (Windows) voor videoinstructies (Engels).
 
-Tijdens de workshop gaan we met deze [notebook](https://hanbedrijfskunde.github.io/im/workshops/bigdata/wsbigdata.nb.html) werken.
+Tijdens de workshop gaan we met deze [notebook](https://hanbedrijfskunde.github.io/onderzoek/bda.nb.html) werken.

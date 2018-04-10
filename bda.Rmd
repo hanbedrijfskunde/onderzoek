@@ -27,7 +27,8 @@ library(leaflet)
 Voor meer achtergrond over de data lees [hier](http://www.europeansocialsurvey.org/data/module-index.html).
 
 ```{r}
-myDF <- read.csv("./data/soc-trust.csv")
+url <- "https://raw.githubusercontent.com/hanbedrijfskunde/onderzoek/master/data/soc-trust.csv"
+myDF <- read.csv(url)
 
 str(myDF)
 summary(myDF)
