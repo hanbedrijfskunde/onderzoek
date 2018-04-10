@@ -79,5 +79,5 @@ p
 Met `plotly` kun je eenvoudig interactie toevoegen.
 
 ```{r}
-ggplotly(p)
+ggplotly(p) %>% layout(autosize = F, width = 800)
 ```
