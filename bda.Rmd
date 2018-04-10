@@ -20,6 +20,7 @@ library(gsheet)
 library(tidyverse)
 library(plotly)
 library(leaflet)
+library(plotly)
 ```
 
 
@@ -67,5 +68,16 @@ gndrSummy$gndr <- recode_factor(gndrSummy$gndr, `1` = "m", `2` = "f")
 barplot(gndrSummy$netusage, names.arg = gndrSummy$gndr, col = "#00cc88")
 ```
 
+Om wat meer controle te krijgen over de opmaak van de grafieken kun je de library `ggplot` toepassen.
 
+```{r}
+p <- ggplot(myDF) +
+  geom_boxplot(aes(x = cntry, y = ppltrst), fill = "violet")
+p
+```
 
+Met `plotly` kun je eenvoudig interactie toevoegen.
+
+```{r}
+ggplotly(p)
+```
