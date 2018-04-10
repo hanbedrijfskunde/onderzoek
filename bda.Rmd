@@ -1,0 +1,70 @@
+---
+title: "Big Data Analytics"
+output: html_notebook
+---
+
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+# check.packages function: install and load multiple R packages.
+# Check to see if packages are installed. Install them if they are not, then load them into the R session.
+check.packages <- function(pkg){
+    new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
+    if (length(new.pkg)) 
+        install.packages(new.pkg, dependencies = TRUE)
+    sapply(pkg, require, character.only = TRUE)
+}
+
+# Usage example
+packages<-c("gsheet", "tidyverse", "plotly", "leaflet")
+check.packages(packages)
+library(gsheet)
+library(tidyverse)
+library(plotly)
+library(leaflet)
+```
+
+
+# Inlezen data
+Voor meer achtergrond over de data lees [hier](http://www.europeansocialsurvey.org/data/module-index.html).
+
+```{r}
+myDF <- read.csv("./data/soc-trust.csv")
+
+str(myDF)
+summary(myDF)
+```
+
+# Opschonen data
+Een aantal codes moeten naar NA (=not available) worden veranderd. Dit is de standaard code in R voor ontbrekende waarden.
+
+```{r}
+myDF$gndr[myDF$gndr == 9] <- NA
+myDF$agea[myDF$agea == 999] <- NA
+myDF$nwspol[myDF$nwspol %in% c(6666,7777,8888,9999)] <- NA
+myDF$netustm[myDF$netustm %in% c(6666,7777,8888,9999)] <- NA
+myDF$netusoft[myDF$netusoft %in% c(7,8,9)] <- NA
+myDF$ppltrst[myDF$ppltrst %in% c(77,88,99)] <- NA
+myDF$pplfair[myDF$pplfair %in% c(77,88,99)] <- NA
+myDF$pplhlp[myDF$pplhlp %in% c(77,88,99)] <- NA
+ 
+summary(myDF)
+```
+
+# Visualiseren data
+We kunnen kijken naar de  verdelingen en kruisgrafieken bouwen.
+
+```{r}
+hist(myDF$agea, col = "tomato", xlab = "Leeftijd")
+
+plot(myDF$agea, myDF$netustm, col = "#0099e6")
+
+boxplot(myDF$ppltrst~myDF$cntry, col = "violet")
+
+grpByGndr <- myDF %>% filter(!is.na(gndr)) %>% group_by(gndr)
+
+gndrSummy <- summarize(grpByGndr, count = n(), netusage = mean(netustm, na.rm = TRUE))
+gndrSummy$gndr <- recode_factor(gndrSummy$gndr, `1` = "m", `2` = "f")
+barplot(gndrSummy$netusage, names.arg = gndrSummy$gndr, col = "#00cc88")
+```
+
+
+
