@@ -1,0 +1,64 @@
+---
+title: "Gemeentedata"
+output: html_notebook
+---
+
+#### Lees data in en bekijk kwaliteit
+
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+library(tidyverse)
+library(plotly)
+```
+
+
+```{r}
+myDF <- read.csv2("./data/gemeenten.csv", sep = ";")
+
+str(myDF)
+summary(myDF)
+```
+
+De dataset bevat gegevens van `r dim(myDF)[1]` gemeenten in Nederland.
+
+#### Is er een verband tussen de gemiddelde leeftijd in een gemeente en de tevredenheid over de algemene leefbaarheid?
+
+```{r}
+p <- plot_ly(data = myDF,
+             x = ~Gemiddelde.leeftijd.bevolking,
+             y = ~Totaalscore.Leefbaarometer.2.0..label., 
+             type = 'scatter',
+             mode = 'markers',
+             marker = list(size = 12,
+                       color = 'salmon',
+                       line = list(color = 'tomato',
+                                   width = 2)
+                       ),
+             hoverinfo = 'text',
+             text = ~paste(Gemeenten,
+                      '<br> Gem. leeft.: ', Gemiddelde.leeftijd.bevolking,
+                      '<br> Leefbaar: ', Totaalscore.Leefbaarometer.2.0..label.),
+             width = 800
+        )
+p
+```
+
+#### Is er een verband tussen de bevolkingsdichtheid in een gemeente en de tevredenheid over de algemene leefbaarheid?
+
+```{r}
+p <- plot_ly(data = myDF,
+             x = ~Bevolkingsdichtheid,
+             y = ~Totaalscore.Leefbaarometer.2.0..label., 
+             type = 'scatter', mode = 'markers',
+             marker = list(size = 12,
+                       color = 'skyblue',
+                       line = list(color = 'royalblue',
+                                   width = 2)
+                       ),
+             hoverinfo = 'text',
+             text = ~paste(Gemeenten,
+                      '<br> Bevolkingsdichtheid: ', Bevolkingsdichtheid,
+                      '<br> Leefbaar: ', Totaalscore.Leefbaarometer.2.0..label.),
+             width = 800
+        )
+p
+```
