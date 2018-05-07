@@ -2,6 +2,7 @@
 <html>
 	<head>
 	  <style type="text/css">
+	  
 .knitr .inline {
   background-color: #f7f7f7;
   border:solid 1px #B0B0B0;
@@ -85,67 +86,33 @@ section.nopad {
   padding: 0px; margin: 0px;
 }
 
-div#enablers {
-    width: 110px;
-    height: 80px;
-    position: relative;
-    background-color: white;
-    opacity: 0.9;
-    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-    animation-fill-mode: forwards;
-    animation-name: enablers;
-    animation-duration: 4s;
-    animation-timing-function: ease;
+.animated {
+    color: red;
+    -webkit-animation-name: clrs; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 20s; /* Safari 4.0 - 8.0 */
+    animation-name: clrs;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
 }
 
 /* Safari 4.0 - 8.0 */
-@-webkit-keyframes enablers {
-    0%   {left:300px; top:0px;}
-    25%   {left:550px; top:0px;}
-    50%  {left:800px; top:0px;}
-    75%  {left:800px; top:200px;}
-    100%  {left:800px; top:400px;}
+@-webkit-keyframes clrs {
+    0%   {color: orange;}
+    20%  {color: darkorange;}
+    40%  {color: tomato;}
+    60% {color: tomato;}
+    80% {color: darkorange;}
+    100% {color: orange;}
 }
 
 /* Standard syntax */
-@keyframes enablers {
-    0%   {left:300px; top:0px;}
-    25%   {left:550px; top:0px;}
-    50%  {left:800px; top:0px;}
-    75%  {left:800px; top:200px;}
-    100%  {left:800px; top:400px;}
-}
-
-div#outcomes {
-    width: 110px;
-    height: 80px;
-    position: relative;
-    background-color: white;
-    opacity: 0.9;
-    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-    animation-fill-mode: forwards;
-    animation-name: outcomes;
-    animation-duration: 4s;
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes outcomes {
-    0%   {left:300px; top:0px;}
-    25%  {left:350px; top:0px;}
-    50%  {left:420px; top:0px;}
-    75%  {left:420px; top:100px;}
-    100%  {left:420px; top:200px;}
-}
-
-/* Standard syntax */
-@keyframes outcomes {
-    0%   {left:300px; top:0px;}
-    25%  {left:350px; top:0px;}
-    50%  {left:420px; top:0px;}
-    75%  {left:420px; top:100px;}
-    100%  {left:420px; top:200px;}
+@keyframes clrs {
+    0%   {color: orange;}
+    20%  {color: darkorange;}
+    40%  {color: tomato;}
+    60% {color: tomato;}
+    80% {color: darkorange;}
+    100% {color: orange;}
 }
 
 </style>
@@ -172,6 +139,16 @@ div#outcomes {
 	<body>
 		<div class="reveal">
 			<div class="slides">
+			  <section>
+			      
+			    <h1 class="animated">
+			      Big Data Analytics
+			    </h1>
+			    
+			    <h3>
+			      D-cluster Onderzoek
+			    </h3>
+			  </section>
 				<section>
 			    
 						<h1>Witek ten Hove</h1>
