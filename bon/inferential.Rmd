@@ -57,3 +57,9 @@ pltPrijs <- ggplot(myDF) +
 ggplotly(pltPrijs, width = 800)
 ```
 
+```{r}
+library(sjPlot)
+
+dist_chisq(chi2 = 0, deg.f = 2, xmax=9)
+```
+
