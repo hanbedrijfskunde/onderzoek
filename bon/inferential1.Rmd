@@ -1,0 +1,65 @@
+---
+title: "Statistische verbanden"
+output: html_notebook
+---
+
+## Lees data in en beoordeel kwaliteit
+
+```{r}
+library(gsheet)
+library(tidyverse)
+library(plotly)
+
+url <- "https://docs.google.com/spreadsheets/d/1WmdPW7f8fIN7tUgVSTtuR_2pwOkk8S_6ujI33MWZ0TI/edit?usp=sharing"
+myDF <- gsheet2tbl(url)[-3] %>% filter(., `Bentustudent` == "Ja")
+str(myDF)
+```
+
+## Datareiniging
+Het aantal respondenten bedraagt `r dim(myDF)[1]`, waarvan `r round(100*sum(myDF[3]=="Vrouw")/dim(myDF)[1])`% vrouwen.
+
+```{r}
+# Zet character om naar factor
+myDF <- myDF %>% mutate_if(is.character, funs(as.factor))
+
+# Breng vreemde prijzen naar realistische niveaus
+realisticPricing <- function(p) {
+  r <- if_else(p<500 | is.na(p), p, p/100)
+  return(r)
+}
+
+myDF[[11]] <- myDF[[11]] %>% as.double(.) %>% realisticPricing(.)
+
+# Bereken zoektijd en filter rare waarden uit
+myDF$Zoektijd <- myDF[[9]] - myDF[[8]]
+myDF <- filter(myDF, Zoektijd < 1200)
+myDF$Zoektijd <- as.factor(myDF$Zoektijd)
+
+summary(myDF)
+```
+
+# Visualiseren
+
+```{r}
+# Zoektijd per geslacht
+pltZoek <- ggplot(myDF) +
+  geom_bar(aes(Zoektijd, fill = `Watisuwgeslacht`))
+ggplotly(pltZoek, width = 800)
+
+# Zoektijd versus prijs
+
+pltPrijs <- ggplot(myDF) +
+  geom_point(aes(x = Zoektijd, y = `Watisdeprijsvanhetproductdieuheeftgevonden`, color = `Watisuwgeslacht`))
+ggplotly(pltPrijs, width = 800)
+
+pltPrijs <- ggplot(myDF) +
+  geom_jitter(aes(x = Zoektijd, y = `Watisdeprijsvanhetproductdieuheeftgevonden`, color = `Watisuwgeslacht`), width = 0.20)
+ggplotly(pltPrijs, width = 800)
+```
+
+```{r}
+library(sjPlot)
+
+dist_chisq(chi2 = 0, deg.f = 2, xmax=9)
+```
+

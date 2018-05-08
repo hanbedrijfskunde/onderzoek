@@ -28,7 +28,7 @@ library(plotly)
 Voor meer achtergrond over de data lees [hier](http://www.europeansocialsurvey.org/data/module-index.html).
 
 ```{r}
-url <- "https://raw.githubusercontent.com/hanbedrijfskunde/onderzoek/master/data/soc-trust.csv"
+url <- "https://raw.githubusercontent.com/hanbedrijfskunde/onderzoek/master/bda/data/soc-trust.csv"
 myDF <- read.csv(url)
 
 str(myDF)
