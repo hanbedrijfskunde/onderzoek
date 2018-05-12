@@ -27,7 +27,7 @@ library(plotly)
 # Inlezen data
 Voor meer achtergrond over de data lees [hier](http://www.europeansocialsurvey.org/data/module-index.html).
 
-```{r}
+```{r include=FALSE}
 url <- "https://raw.githubusercontent.com/hanbedrijfskunde/onderzoek/master/bda/data/soc-trust.csv"
 myDF <- read.csv(url)
 
@@ -38,7 +38,7 @@ summary(myDF)
 # Opschonen data
 Een aantal codes moeten naar NA (=not available) worden veranderd. Dit is de standaard code in R voor ontbrekende waarden.
 
-```{r}
+```{r include=FALSE}
 myDF$gndr[myDF$gndr == 9] <- NA
 myDF$agea[myDF$agea == 999] <- NA
 myDF$nwspol[myDF$nwspol %in% c(6666,7777,8888,9999)] <- NA
