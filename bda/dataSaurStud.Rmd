@@ -1,0 +1,75 @@
+---
+title: "T-Rex"
+subtitle: "Waarom je data moet visualiseren"
+output: html_notebook
+---
+
+# Lees data in en verander meetniveaus (categorie naar numeriek)
+
+```{r message=FALSE, warning=FALSE, paged.print=FALSE}
+library(pastecs)
+library(tidyverse)
+
+allData <- read.csv("data/datasets/DatasaurusDozen-wide.tsv", sep = "\t", stringsAsFactors = FALSE)[-1,]
+allData <- data.frame(sapply(allData, as.numeric))
+```
+
+# Beschrijvende statistiek
+Vergelijk de kwaliteit van de drie afzonderlijke datasets (dots, dino en star) en beoordeel in welke mate ze gelijk zijn.
+
+```{r}
+# Selecteer dots data
+dotsData <- select(allData, dots, dots.1)
+
+# Bepaal middelpunt en spreiding
+stat.desc(dotsData, basic = FALSE)[c(2,6),]
+
+# Bepaal correlatie
+cor(dotsData)
+```
+
+```{r}
+
+# Selecteer dino data
+dnData <- select(allData, dino, dino.1)
+
+# Bepaal middelpunt en spreiding
+
+
+# Bepaal correlatie
+
+```
+
+```{r}
+# Selecteer star data
+
+
+# Bepaal middelpunt en spreiding
+
+
+# Bepaal correlatie
+
+```
+
+# Datasaurus
+Visualiseer de data via een eenvoudige x/y-grafiek. Wat valt op en welke conclusie trek je als je de uitkomsten van de vorige bewerkingen meeneemt?
+
+```{r}
+# Plot de dots data met kleur 'skyblue'
+
+ggplot(dotsData) +
+  geom_point(aes(x = dots, y = dots.1), color = "skyblue")
+```
+
+```{r}
+# Plot de dino data met kleur 'mediumseagreen'
+
+ggplot(dnData) +
+  geom_point(aes(x = dino, y = dino.1))
+```
+
+```{r}
+# Plot de star data met kleur 'tomato'
+
+
+```
