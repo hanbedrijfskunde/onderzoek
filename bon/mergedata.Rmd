@@ -1,0 +1,200 @@
+---
+title: "Merge data sets"
+output: html_notebook
+---
+# BMN-B01
+## Load packages 
+
+```{r}
+library(tidyverse)
+library(gsheet)
+```
+
+## Read data and test dimensions
+
+```{r}
+urls <- c("https://docs.google.com/spreadsheets/d/1NGIuK0_FczqBHwGyA55ynOiBck-J-UItrGfJuEIoCcI/edit?usp=sharing",
+          "https://docs.google.com/spreadsheets/d/1oM9oUjVcx99qqBnthx0BWhhma3VXOuE5Zj6pbcVo26k/edit?usp=sharing",
+          "https://docs.google.com/spreadsheets/d/1kunilb5WCa2eIfDLSOr2F9CHk0_q4CiLsqojmNq1Rtc/edit?usp=sharing",
+          "https://docs.google.com/spreadsheets/d/1SlX6FYqUv60n_BeymGCl1jHB4BnEvBxK4qhYbtozgvE/edit?usp=sharing",
+          "https://docs.google.com/spreadsheets/d/1GHHyPv0UOterDqH16rTIZqZsv5sRuQqnEEwPobCIQ-E/edit?usp=sharing",
+          "https://docs.google.com/spreadsheets/d/15ic92oOPzbsCHpKggDZR5ut-Il63SK1BGFt4Bw5L0bY/edit?usp=sharing")
+
+for(i in urls) {
+  testDF <- gsheet2tbl(i)
+  print(dim(testDF))
+  
+}
+
+
+```
+
+## Merge data
+
+```{r}
+mergeDF <- data.frame()
+
+for(i in urls) {
+  inputDF <- gsheet2tbl(i)
+  names(inputDF) <- c("Tijdstempel",
+                     "Student",
+                     "Verzenden",
+                     "Geslacht",
+                     "Leeftijd",
+                     "Device",
+                     "Zoektijd.Verwacht",
+                     "Zoektijd.Bereid",
+                     "Begintijd",
+                     "Eindtijd",
+                     "Url",
+                     "Prijs",
+                     "Beginpunt",
+                     "Tevredenheid",
+                     "Bedrijf")
+  mergeDF <- rbind(mergeDF, inputDF)
+  
+}
+```
+
+## Add calculated column
+
+```{r}
+mergeDF$Zoektijd <- mergeDF$Eindtijd - mergeDF$Begintijd
+```
+
+## Write csv
+
+```{r}
+write.csv(mergeDF, "data-bmnb01.csv")
+```
+
+# BMN-B05
+## Load packages 
+
+```{r}
+library(tidyverse)
+library(gsheet)
+```
+
+## Read data and test dimensions
+
+```{r}
+urls <- c("https://docs.google.com/spreadsheets/d/1KwGBYe-sRZMVhmkmp-V8pF60XJ6sPykW496D-oF5MdY/edit?usp=sharing",
+          "https://docs.google.com/spreadsheets/d/1yqCTs32ezLmFzwZeOJyXq_SywMtzifg4NXqcduPVe2g/edit?usp=sharing",
+          "https://docs.google.com/spreadsheets/d/1f9_HnGWawanDvXcBGzjbnuO81V7n6cSd31CowAhQzMo/edit?usp=sharing",
+          "https://docs.google.com/spreadsheets/d/1yHSZIIOV7UfEh_VxBQeEq7uWx3LEynOfwT6e1bN_lFA/edit?usp=sharing",
+          "https://docs.google.com/spreadsheets/d/1ReRH3wVquEej-RQmgOJpDNm-_85_SIY48E9bvuBa_Yo/edit?usp=sharing")
+
+for(i in urls) {
+  testDF <- gsheet2tbl(i)
+  print(dim(testDF))
+  
+}
+
+
+```
+
+## Merge data
+
+```{r}
+mergeDF <- data.frame()
+
+for(i in urls) {
+  inputDF <- gsheet2tbl(i)
+  names(inputDF) <- c("Tijdstempel",
+                     "Student",
+                     "Postcode",
+                     "Geslacht",
+                     "Leeftijd",
+                     "Merkbekendheid",
+                     "Reclameactiviteiten",
+                     "Webshop",
+                     "Social.media",
+                     "Koopfactoren",
+                     "Online.vs.fysiek",
+                     "Informatietevredenheid",
+                     "Koopbereidheid",
+                     "Aanbevelen",
+                     "Online.niet.aanwezig",
+                     "Menselijk.contact",
+                     "Persoonlijke.aandacht",
+                     "Verbinding",
+                     "Menselijke.betrokkenheid",
+                     "Non.verbale.comm",
+                     "Houding.verkopers",
+                     "Beeld.verkopers",
+                     "Community",
+                     "Informatie.gebruikers",
+                     "Bedrijf")
+  mergeDF <- rbind(mergeDF, inputDF)
+  
+}
+```
+
+## Write csv
+
+```{r}
+write.csv(mergeDF, "data-bmnb05.csv")
+```
+
+# BMA-B03
+## Load packages 
+
+```{r}
+library(tidyverse)
+library(gsheet)
+```
+
+## Read data and test dimensions
+
+```{r}
+urls <- c("https://docs.google.com/spreadsheets/d/12_i8xIuNG3d97dK48Ts92HH7PVVrMxkZDp4WnspAgPI/edit?usp=sharing",
+          "https://docs.google.com/spreadsheets/d/1DSwdBH4I82V0olCOcUmALRAlDLyoM28QXzKVrSW74ac/edit?usp=sharing",
+          "https://docs.google.com/spreadsheets/d/1RP7HCqR8csn3VtuUbwSFgF7X-SxVmIELSn-NDwGx104/edit?usp=sharing",
+          "https://docs.google.com/spreadsheets/d/1v-UJOP2VtG4K6Z1jOUeUFi0JCkAMQozGh3rF_QaSNAQ/edit?usp=sharing",
+          "https://docs.google.com/spreadsheets/d/1oGSsZ1vljDJ4zOTK4A813jSg0XN7iCFocEsyqmdD9U8/edit?usp=sharing",
+          "https://docs.google.com/spreadsheets/d/1L2Wh1g15AFXYXab_4IctK9lD7n55GJ7ObsaE1RAvx9k/edit?usp=sharing",
+          "https://docs.google.com/spreadsheets/d/1XUJ3idmsZGBYee7R9JqdQuld79WptWR18E29gznjRSw/edit?usp=sharing")
+
+for(i in urls) {
+  testDF <- gsheet2tbl(i)
+  print(dim(testDF))
+  
+}
+
+
+```
+
+## Merge data
+
+```{r}
+mergeDF <- data.frame()
+
+for(i in urls) {
+  inputDF <- gsheet2tbl(i)
+  names(inputDF) <- c("Tijdstempel",
+                     "Student",
+                     "Geslacht",
+                     "Leeftijd",
+                     "Woonsituatie",
+                     "Opleiding",
+                     "Postcode",
+                     "Waardering",
+                     "Menselijk",
+                     "Aangenaam",
+                     "Persoonlijk",
+                     "Non.Verbale.Comm",
+                     "Betrokkenheid",
+                     "Recensies",
+                     "Populariteit",
+                     "Bedrijf")
+  mergeDF <- rbind(mergeDF, inputDF)
+  
+}
+```
+
+## Write csv
+
+```{r}
+write.csv(mergeDF, "data-bmab03.csv")
+```
