@@ -1,0 +1,39 @@
+---
+title: ""
+author: "Witek ten Hove"
+date: "5/26/2018"
+output:
+  ioslides_presentation: 
+      logo: logo.png
+      css: styles.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+source("scripts.R")
+```
+
+## John Snow (1813 - 1858)
+<div class="columns-2">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/John_Snow.jpg" width="250">
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Snow-cholera-map-1.jpg" width="400">
+</div>
+
+## London in Times of Cholera
+
+```{r}
+m1
+```
+<br>
+[Data source](https://fusiontables.google.com/DataSource?docid=147wlDisDp6NnpNxHQpbnjAQ-iW4dR2MAmFdQxYc#rows:id=1)
+
+## London in Times of Cholera
+
+```{r}
+m2
+```
+<br>
+[Data source](https://fusiontables.google.com/DataSource?docid=147wlDisDp6NnpNxHQpbnjAQ-iW4dR2MAmFdQxYc#rows:id=1)
+
+
