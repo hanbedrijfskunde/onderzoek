@@ -36,4 +36,12 @@ m2
 <br>
 [Data source](https://fusiontables.google.com/DataSource?docid=147wlDisDp6NnpNxHQpbnjAQ-iW4dR2MAmFdQxYc#rows:id=1)
 
+## James Lind (1716 - 1794)
+
+<div class="columns-2">
+  <img src="http://www.cmaj.ca/content/cmaj/180/1/23/F1.large.jpg" width="350">
+
+  <img src="https://www.vcuhealth.org/media/Image/research.jpg" width="375">
+</div>
+
 
