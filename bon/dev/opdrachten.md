@@ -1,6 +1,6 @@
 # Opdrachten
 
-Alle onderstaande opdrachten dienen in een notebook te worden bijgehouden ([reproducible research[(https://en.wikipedia.org/wiki/Reproducibility#Reproducible_research))
+Alle onderstaande opdrachten dienen in een notebook te worden bijgehouden ([reproducible research](https://en.wikipedia.org/wiki/Reproducibility#Reproducible_research))
 
 ![](https://www.ibm.com/support/knowledgecenter/en/SS3RA7_sub/modeler_crispdm_ddita/clementine/images/crisp_process.jpg)
 
