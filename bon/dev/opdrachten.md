@@ -1,6 +1,7 @@
 # Opdrachten
 
 Alle onderstaande opdrachten dienen in een notebook te worden bijgehouden. Zie ook: [reproducible research](https://en.wikipedia.org/wiki/Reproducibility#Reproducible_research) en [CRISP DM](https://en.wikipedia.org/wiki/Cross-industry_standard_process_for_data_mining).
+
 ![](https://www.ibm.com/support/knowledgecenter/en/SS3RA7_sub/modeler_crispdm_ddita/clementine/images/crisp_process.jpg)
 
 #### Opdracht 1: Dataset kiezen en context begrijpen (literatuurverzameling)
