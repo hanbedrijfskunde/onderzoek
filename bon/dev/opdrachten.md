@@ -24,7 +24,7 @@ Tijdens het tweede werkcollege worden alle voorgestelde onderzoeksvragen [verzam
 Ieder team bedenkt bij de centrale vraag een set deelvragen en zorgt dat deze set een [goede verdeling](https://docs.google.com/presentation/d/e/2PACX-1vS713PwEB3lrsXZ-jKRbBqd_p3ThnqHdr6FcEImcHsQniE3igTr2ZZg9UA2fb9-3vK9g-HpJ7oDtFLw/pub?start=false&loop=false&delayms=3000) aan theoretische, empirische en adviserende vragen bevat (TEA).
 
 ### Opdracht 2: Data inlezen en kwaliteit beoordelen (beschrijvend en visueel)
-Via beschrijvende statistiek en univariate visualisaties kan de structuur en kwaliteit van de data worden beoordeeld.
+Via beschrijvende statistiek en univariate visualisaties kan de structuur en kwaliteit van de data worden beoordeeld. Yep
 
 ### Opdracht 3: Data voorbereiden, bijvoorbeeld meetniveaus veranderen
 Eventuele fouten in de data worden hersteld. Waar nodig kunnen de meetniveaus worden aangepast (bijv: van tekst naar categorie of van numeriek naar boolean).
