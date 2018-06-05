@@ -2,7 +2,7 @@
 title: "BMA-B03"
 ---
 
-De groep BMA-B03 heeft onderzoek gedaan naar de ervaren mate van social presence op websites en effect hiervan op de [customer journey](https://docs.google.com/presentation/d/e/2PACX-1vQBzc8uAJgimoVFKxKkDkYw2xoeMwXCv7_52r1LWSC1K_2yWTsaDgFRJ5Ma6-3M9TAyMks2qtusCRvi/pub?start=true&loop=true&delayms=5000). Als uitgangspunt goldt het onderzoek van Lu, Fan & Zhou ([2016](https://www.sciencedirect.com/science/article/pii/S0747563215302715))
+De groep BMA-B03 heeft onderzoek gedaan naar de ervaren mate van social presence op websites en het effect hiervan op de [customer journey](https://docs.google.com/presentation/d/e/2PACX-1vQBzc8uAJgimoVFKxKkDkYw2xoeMwXCv7_52r1LWSC1K_2yWTsaDgFRJ5Ma6-3M9TAyMks2qtusCRvi/pub?start=true&loop=true&delayms=5000). Als uitgangspunt goldt het onderzoek van Lu, Fan & Zhou ([2016](https://www.sciencedirect.com/science/article/pii/S0747563215302715))
 <hr>
 
 Meer informatie volgt.
