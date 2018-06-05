@@ -1,0 +1,16 @@
+name: hanbk
+navbar:
+  title: HAN Bedrijfskunde
+  type: inverse
+  left:
+  - text: Welkom
+    href: index.html
+  - text: BMN-B01
+    href: bmnb01.html
+output_dir: '.'
+output:
+  html_document:
+    theme: cosmo
+    lib_dir: site_libs
+    self_contained: no
+
