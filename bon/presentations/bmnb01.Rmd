@@ -35,3 +35,7 @@ De groep BMN-B01 heeft onderzoek gedaan naar de fase "Overweging" binnen de [Cus
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSL2mzmpuBMnB7A6H88GS2QSsHE6-S-pjKnCj8Bb9m4I5NpLPg4PsbjOqnK9QARCrdXlFReG_sv-E5o/embed?start=false&loop=false&delayms=3000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 <hr>
 
+## Vespa
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT3SG8vRxysuL8tF3ZnAvMUBSbvH7OpsrXWF1sLK1heAJga3-c0ilRhb2dkewN6HN3HJrjmxwWI8BcL/embed?start=false&loop=false&delayms=3000" frameborder="0" width="640" height="389" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
