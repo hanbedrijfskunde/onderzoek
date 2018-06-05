@@ -3,8 +3,19 @@ title: "HAN Bedrijfskunde"
 subtitle: "Presentaties B-Cluster Onderzoek"
 ---
 
-Tijdens hun eerste leerjaar worden studenten onder andere getraind in het doen van kwantitatief onderzoek. Samen met een docent wordt een recent wetenschappelijk onderzoek uitgekozen en de koppeling met het bedrijfskundig werkveld bepaald. Op basis hiervan worden nieuwe onderzoeken opgesteld waaraan de studenten gedurende een semester in teams werken. Hierbij volgen ze het de hele onderzoeks cyclus van vraagformulering tot conclusie en presentatie.
+<hr>
+### Talent Driven Value
 
-De huidige groepen hebben een onderzoek gedaan naar verschillende fases binnen de customer journey.
+Wat als je klanten geholpen worden door een [robot](https://youtu.be/JvbHu_bVa_g), technologie de kwaliteit van je processen [bepaalt](https://youtu.be/4DKrcpa8Z_E) en je software niet meer koopt, maar samen met een [community](https://youtu.be/w3jLJU7DT5E) bouwt? Dan is de belangrijkste waardegenerator het talent dat je aan je organisatie weet te binden.
+
+### Smart Business
+
+Bij de opleiding [Bedrijfskunde](https://www.han.nl/opleidingen/bachelor/bedrijfskunde/vt/) van de Hogeschool van Arnhem en Nijmegen leren we jong talent hoe uit de verbinding tussen technologie en organisatie waarde kan worden gecreëerd. Onze ervaren onderwijsprofessionals staan in direct contact met het onderzoeks- en werkveld en bouwen voordurend aan een hoger onderwijs dat actueel is en relevant voor de maatchappij.
+
+### Data Skills
+
+Tijdens hun eerste leerjaar worden studenten getraind in de omgang met data. Samen met een docent wordt naar recente wetenschappelijke kennis gezocht en worden relaties met de bedrijfskundige praktijk verkend. Via een [design thinking](https://dschool.stanford.edu/) proces worden ideëen voor onderzoeksprojecten gegenereerd waar teams in onderlinge coördinatie aan gaan werken.
+
+Dit semester is onderzoek gedaan naar verschillende fases binnen de customer journey. Op de volgende pagina's presenteren de teams hun resultaten.
 
 ![Bron: https://www.mijnmarketing.com/wp-content/uploads/customerjourney-mm-blog-1140x475.png](https://www.mijnmarketing.com/wp-content/uploads/customerjourney-mm-blog-1140x475.png)
