@@ -1,6 +1,7 @@
 ---
 title: "HAN Bedrijfskunde"
 subtitle: "Presentaties B-Cluster Onderzoek"
+author: witek.tenhove@han.nl
 ---
 
 <hr>
