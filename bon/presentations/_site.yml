@@ -9,8 +9,6 @@ navbar:
     href: bmnb01.html
   - text: BMN-B05
     href: bmnb05.html
-  - text: BMA-B03
-    href: bmab03.html
   - text: Doe mee!
     href: meedoen.html
 output_dir: '.'
