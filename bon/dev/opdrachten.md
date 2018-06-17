@@ -7,7 +7,7 @@ Alle onderstaande opdrachten dienen in een notebook te worden bijgehouden. Zie o
 Docent en/of studenten mogen zelf kiezen welk statistisch programma ze willen gebruiken voor data analyse (SPSS, R, Rapidminer, etc.)
 
 ### Opdracht 1: Thema kiezen en literatuurverzameling (Context begrijpen)
-De docent kiest een thema, bijv. Customer Journey, Employee Attrition, Vastgoedwaarde, Finance, etc. en zoekt hierbij een **wetenschappelijk** artikel. Dit artikel wordt uitgedeeld en besproken tijdens de het eerste werkcollege:
+De docent kiest een thema, bijv. Customer Journey, Employee Attrition, Vastgoedwaarde, Finance, etc. en zoekt hierbij een **wetenschappelijk** artikel. Dit artikel wordt uitgedeeld en besproken tijdens de het eerste werkcollege. Vragen die gesteld kunnen worden, zijn:
 
 + Hoe het artikel is opgebouwd qua structuur (relatie met onderzoeksplan);
 + Welk algemeen probleem de onderzoekers als uitgangspunt hebben genomen (relatie met opleiding);
