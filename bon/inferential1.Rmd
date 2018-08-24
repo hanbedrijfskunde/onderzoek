@@ -11,7 +11,7 @@ library(tidyverse)
 library(plotly)
 
 url <- "https://docs.google.com/spreadsheets/d/1WmdPW7f8fIN7tUgVSTtuR_2pwOkk8S_6ujI33MWZ0TI/edit?usp=sharing"
-myDF <- gsheet2tbl(url)[-3] %>% filter(., `Bentustudent` == "Ja")
+myDF <- gsheet2tbl(url)[-3] %>% filter(., `Bent u student` == "Ja")
 str(myDF)
 ```
 
@@ -43,17 +43,17 @@ summary(myDF)
 ```{r}
 # Zoektijd per geslacht
 pltZoek <- ggplot(myDF) +
-  geom_bar(aes(Zoektijd, fill = `Watisuwgeslacht`))
+  geom_bar(aes(Zoektijd, fill = `Wat is uw geslacht`))
 ggplotly(pltZoek, width = 800)
 
 # Zoektijd versus prijs
 
 pltPrijs <- ggplot(myDF) +
-  geom_point(aes(x = Zoektijd, y = `Watisdeprijsvanhetproductdieuheeftgevonden`, color = `Watisuwgeslacht`))
+  geom_point(aes(x = Zoektijd, y = `Prijs`, color = `Wat is uw geslacht`))
 ggplotly(pltPrijs, width = 800)
 
 pltPrijs <- ggplot(myDF) +
-  geom_jitter(aes(x = Zoektijd, y = `Watisdeprijsvanhetproductdieuheeftgevonden`, color = `Watisuwgeslacht`), width = 0.20)
+  geom_jitter(aes(x = Zoektijd, y = `Prijs`, color = `Wat is uw geslacht`), width = 0.20)
 ggplotly(pltPrijs, width = 800)
 ```
 
